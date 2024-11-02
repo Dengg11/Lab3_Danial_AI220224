@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: beige;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 400px;
+            width: 100%;
+            align-items: center;
+        }
+
+        /* Header */
+        .header {
+    display: flex;
+    justify-content: space-between; /* Distribute space between items */
+    align-items: center; /* Center items vertically */
+    width: 100%;
+    height: 100px;
+    background-color: rgba(156, 122, 10, 0.747);
+    color: white;
+    font-size: 45px;
+    font-weight: bold;
+    padding: 0 20px; /* Add padding on left and right for better spacing */
+}
+
+.logo {
+    height: 80%; /* Adjust logo height */
+    max-width: 100px; /* Set a max width for the logos */
+}
+
+        /* Content Area */
+        .content {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 20px;
+            justify-content: space-between;
+        }
+
+        /* Sidebar */
+        .side-bar {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(241, 188, 10);
+    padding: 15px;
+    width: 200px;
+    border: 4px solid black; /* Added black border */
+}
+
+
+        .side-bar a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 20px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        
+
+        /* Main Content Area */
+        .body-area {
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            padding: 20px;
+            flex-grow: 1;
+            margin-left: 20px;
+        }
+
+        /* Footer */
+        .footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 50px;
+            background-color: rgb(156, 122, 10, 0.747);
+            color: white;
+            margin-top: 20px;
+        }
+
+        /* Styles for biodata, skills, and pictures */
+        .biodata-table, .skills, .pictures {
+            margin-top: 10px;
+        }
+
+        .pictures {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers the images */
+}
+
+.pictures figure {
+    text-align: center;
+    max-width: 200px;
+    margin: 0; /* Removes any default margin */
+}
+
+.pictures img {
+    width: 100%;
+    max-width: 350px;
+    border: 4px solid #ddd;
+    border-radius: 4px;
+}
+
+.pictures figcaption {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+    font-weight: bold;
+    display: block; /* Ensures it’s always below the image */
+}
+
+.body-area video {
+    margin: 10px auto; /* Centers the video horizontally */
+    border: 4px solid #035723;
+    border-radius: 5px;
+    display: block; /* Ensures the video is treated as a block element */
+    max-width: 100%; /* Makes video responsive */
+    height: auto; /* Maintains aspect ratio */
+}
+
+.body-area p {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+
+
+
+    </style>
+    <script>
+        function showBiodata() {
+            document.querySelector('.body-area').innerHTML = `
+                <h2>My Biodata</h2>
+                <table class="biodata-table" border="1">
+                    <tr>
+                        <td><b>Name</b></td>
+                        <td>DANIAL ZAHIRUL IMAN BIN KAMROL RIZAL</td>
+                        <td style="text-align: center;"><img src="gambardanial.jpg" style="width: 80px"/></td>
+
+                    </tr>
+                    <tr><td><b>Date of Birth</b></td><td colspan="2">11/11/2003</td></tr>
+                    <tr><td><b>Religion</b></td><td colspan="2">Islam</td></tr>
+                    <tr><td><b>Race</b></td><td colspan="2">Melayu</td></tr>
+                    <tr><td><b>Address</b></td><td colspan="2">Lot 11007, Lorong Haji Maarof, Mukim Rimba Terjun, Pontian, Johor</td></tr>
+                    <tr><td><b>Contact</b></td><td colspan="2">Mobile: 012-651-0025, Instagram: dnialzhirul_, Github: Dengg11</td></tr>
+                    <tr><td><b>Course & Institution</b></td><td colspan="2">BACHELOR OF COMPUTER SCIENCE (SOFTWARE ENGINEERING) WITH HONOURS, UTHM</td></tr>
+                    <tr><td><b>Programming Skills</b></td><td colspan="2">C, Java, HTML</td></tr>
+                    <tr><td><b>Personal Interest</b></td><td colspan="2">Coding, Riding Bikes, Social Media</td></tr>
+                    <tr><td><b>Future Plan in 2025</b></td><td colspan="2">Get an excellent result, Intern in a big company, and Travel</td></tr>
+                </table>`;
+        }
+
+        function showSkills() {
+            document.querySelector('.body-area').innerHTML = `
+                <h2>My Skills</h2>
+                <div class="skills">
+                    <ul>
+                        <li><b>Programming:</b> Experienced in Java, C, and HTML with an understanding of data structures.</li>
+                        <li><b>Web Development:</b> Knowledgeable in HTML and CSS for creating interactive web pages.</li>
+                        <li><b>Problem-Solving:</b> Proficient in analytical and critical thinking for software troubleshooting.</li>
+                        <li><b>Leadership:</b> Ex-member of Student Leadership Council of Kolej Kediaman Dalam Kampus UTHM and Facilitator for Minggu Haluan Siswa UTHM 2024.</li>
+
+                    </ul>
+                <h2>My Hobby<h2>
+                <h3>Swimming<h3>
+                    <div class="pictures">
+            <figure>
+                <img src="hobby1.jpg" alt="Picture 1">
+            </figure>
+            <figure>
+                <img src="hobby2.jpg" alt="Picture 2">
+            </figure>
+            <figure>
+                <img src="hobby3.jpg" alt="Picture 3">
+            </figure>
+                </div>`;
+        }
+
+        function showPictures() {
+    document.querySelector('.body-area').innerHTML = `
+        <h2>My Campus Life</h2>
+        <div class="pictures">
+            <figure>
+                <img src="photo1.jpg" alt="Picture 1">
+                <figcaption>Leader of Exco Keselamatan dan Kelestarian of MKP KKDK 23/24</figcaption>
+            </figure>
+            <figure>
+                <img src="photo2.jpg" alt="Picture 2">
+                <figcaption>Facilitator for Minggu Haluan Siswa UTHM 2024</figcaption>
+            </figure>
+            <figure>
+                <img src="photo3.jpg" alt="Picture 3">
+                <figcaption>Leader of KKDK Sukol's Organization</figcaption>
+            </figure>
+            <figure>
+                <img src="photo4.jpg" alt="Picture 4">
+                <figcaption>Participate in Sukan Tradisi FESTKON UTHM 2023</figcaption>
+            </figure>
+                
+                <img src="photo6.jpg" alt="Picture 6">
+                <figcaption>UTHM's Presentative for I-Future program in Kuala Lumpur which officiated by the Prime minister of Malaysia, Datuk Seri Anwar Ibrahim</figcaption>
+            </figure>
+        </div>`;
+}
+
+function showExtra() {
+    document.querySelector('.body-area').innerHTML = `
+        <h2>My friend and I have been working on a device call pet finder for Creative and Innovation 
+            subject on last semester.</h2>
+        <p></p>
+        <video width="500" controls>
+            <source src="petfinder.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h2><h2>
+        <h2>My passion is riding my motorcycle and travel.<h2>
+            <div class="pictures">
+            <figure>
+                <img src="bike1.jpg" alt="Picture 1">
+            </figure>
+            <figure>
+                <img src="bike2.jpg" alt="Picture 2">
+            </figure>
+            <figure>
+                <img src="bike3.jpg" alt="Picture 3">
+            </figure>
+            
+    `;
+}
+
+
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <img src="logo-left.png" alt="Left Logo" class="logo left-logo">
+            Danial's Profile
+            <img src="logo-right.png" alt="Right Logo" class="logo right-logo">
+        </div>
+
+        <!-- Content Section -->
+        <div class="content">
+            <!-- Sidebar -->
+            <div class="side-bar">
+                <a onclick="showBiodata()">About Me</a>
+                <hr>
+                <a onclick="showSkills()">My Skills and Hobby</a>
+                <hr>
+                <a onclick="showPictures()">My Campus Life</a>
+                <hr>
+                <a onclick="showExtra()">More about me</a>
+            </div>
+
+            <!-- Main Body Area -->
+            <div class="body-area">
+                <p>Hello Guys, My name is Danial. I am a final year student of computer science 
+                    and information technology's faculty. This is my profile website. You can discover 
+                    this profile website by clicking the sidebar. Thank you :) .
+                </p>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <div class="footer">
+            &copy; 2024 DANIAL
+        </div>
+    </div>
+
+</body>
+</html>
